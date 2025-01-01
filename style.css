@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f4f6;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    height: auto;
+    width: 50%;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wave {
+    display: inline-block;
+    animation: wave-animation 2s infinite;
+    transform-origin: 70% 70%;
+}
+
+.todo_container {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+.todo_input {
+    display: block;
+    width: 80%;
+    font-size: 20px;
+    padding: 8px;
+    outline: none;
+    border-radius: 8px;
+}
+
+.todo_create_button {
+    display: block;
+    width: 15%;
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 8px;
+    background-color: #0ea5e9;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+
+.todo_create_button:hover {
+    cursor: pointer;
+    background-color: #0c87c9;
+}
+
+.todo_item {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.todo_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+}
+  
+input[type="checkbox"] {
+    position: relative;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid black;
+    border-radius: 4px;
+    vertical-align: -1px;
+    color: black;
+}
+  
+input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.2em;
+    right: -1px;
+    top: -0.2em;
+    visibility: hidden;
+}
+  
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+  
+input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}
+
+.delete_button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete_button:hover {
+    background-color: #ff1a1a;
+}
