@@ -9,6 +9,17 @@ function updateDateTime() {
     const date = now.toLocaleDateString(undefined, dateOptions);
     const time = now.toLocaleTimeString(undefined, timeOptions);
     document.getElementById('datetime').textContent = `${date}, ${time}`;
+
+    const hour = now.getHours();
+    let greeting = 'Good Morning';
+    if (hour >= 12 && hour < 18) {
+        greeting = 'Good Afternoon';
+    } else if (hour >= 18 && hour < 22) {
+        greeting = 'Good Evening';
+    } else if (hour >= 22 || hour < 5) {
+        greeting = 'Good Night';
+    }
+    document.querySelector('h1').innerHTML = `${greeting}, Dinitha <span class="wave">👋</span>`;
 }
 
 setInterval(updateDateTime, 1000);
