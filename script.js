@@ -85,11 +85,3 @@ todoInput.addEventListener('keydown', (event) => {
         addTodo();
     }
 });
-
-// todoContainer.addEventListener('click', (event) => {
-//     if (event.target.classList.contains('delete_button')) {
-//         const index = event.target.getAttribute('data-index');
-//         todoValues.splice(index, 1);
-//         renderTodos();
-//     }
-// });
