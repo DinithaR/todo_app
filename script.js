@@ -41,7 +41,7 @@ function renderTodos() {
                 <span id="task-${index}">${val}</span>
             </div>
             <div class="todo_item_right">
-                <button class="delete_button" data-index="${index}">Delete</button>
+                <button class="delete_button" data-index="${index}">❌</button>
             </div>
         </div>
         `;
@@ -80,17 +80,16 @@ function addTodo() {
 
 todoCreateButton.addEventListener('click', addTodo);
 
-// Add event listener for Enter key
 todoInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
         addTodo();
     }
 });
 
-todoContainer.addEventListener('click', (event) => {
-    if (event.target.classList.contains('delete_button')) {
-        const index = event.target.getAttribute('data-index');
-        todoValues.splice(index, 1);
-        renderTodos();
-    }
-});
+// todoContainer.addEventListener('click', (event) => {
+//     if (event.target.classList.contains('delete_button')) {
+//         const index = event.target.getAttribute('data-index');
+//         todoValues.splice(index, 1);
+//         renderTodos();
+//     }
+// });

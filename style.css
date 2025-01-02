@@ -132,7 +132,7 @@ input[type="checkbox"]:disabled {
 }
 
 .delete_button {
-    background-color: #ff4d4d;
+    background-color: #fff;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -141,5 +141,5 @@ input[type="checkbox"]:disabled {
 }
 
 .delete_button:hover {
-    background-color: #ff1a1a;
+    background-color: #ebdddd;
 }
